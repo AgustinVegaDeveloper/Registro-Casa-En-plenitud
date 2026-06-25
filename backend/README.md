@@ -3,6 +3,7 @@
 ## Quick start
 
 1. Create `.env` from `.env.example`.
+   Replace all placeholder credentials and secrets before running the app.
 2. Install dependencies:
    `pip install -r requirements.txt`
 3. Run migrations:
