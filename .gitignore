@@ -23,3 +23,6 @@ frontend/.env.*
 # Uploads
 backend/app/uploads/*
 !backend/app/uploads/.gitkeep
+
+# Agent context
+AGENTS.md
