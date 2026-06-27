@@ -9,11 +9,16 @@ __pycache__/
 # Virtual environments
 .venv/
 venv/
+node_modules/
+dist/
 
 # Environment files
 .env
 .env.*
 !.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
 
 # Uploads
 backend/app/uploads/*

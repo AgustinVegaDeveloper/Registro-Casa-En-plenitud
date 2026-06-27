@@ -17,8 +17,13 @@ class Settings(BaseSettings):
     initial_admin_username: str = "admin"
     initial_admin_email: str = "admin@casaenplenitud.local"
     initial_admin_password: str = "Admin1234!"
+    cors_allow_origins: str = "http://127.0.0.1:5173,http://localhost:5173"
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
+
+    @property
+    def cors_origins(self) -> list[str]:
+        return [origin.strip() for origin in self.cors_allow_origins.split(",") if origin.strip()]
 
     @property
     def sqlalchemy_database_uri(self) -> str:
